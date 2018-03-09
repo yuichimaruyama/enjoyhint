@@ -686,7 +686,7 @@ var EnjoyHint = function (_options) {
 
                         var labelElement = $('.enjoy_hint_label');
 
-                        if (!originalLabelLeft) {
+                        if (!originalLabelLeft && labelElement.length) {
 
                             originalLabelLeft = labelElement[0].getBoundingClientRect().left;
                             originalLabelTop = labelElement[0].getBoundingClientRect().top;
@@ -694,7 +694,7 @@ var EnjoyHint = function (_options) {
 
                         var skipButton = $('.enjoyhint_skip_btn');
 
-                        if (!originalSkipbuttonLeft) {
+                        if (!originalSkipbuttonLeft && skipButton.length) {
 
                             originalSkipbuttonLeft = skipButton[0].getBoundingClientRect().left;
                             originalSkipbuttonTop = skipButton[0].getBoundingClientRect().top;
@@ -751,7 +751,6 @@ var EnjoyHint = function (_options) {
                                 y1 = labelRect.top;
                                 bezX = x1;
                                 bezY = y1;
-                                console.log("ok");
                             }
 
                             if (window.innerWidth < 900) {
